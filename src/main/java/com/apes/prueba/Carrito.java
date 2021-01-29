@@ -33,7 +33,7 @@ public class Carrito {
         productos = new ArrayList<>();
     }
 
-    static void llenarCarrito(Producto producto ) {
+    static void llenarCarrito(Producto producto) {
 
         productos.add( producto );
     }
@@ -93,5 +93,10 @@ public class Carrito {
         }
 
         return total;
+    }
+
+    static int alternativaPrecioCarrito() {
+
+        return productos.stream().mapToInt( x -> x.precioProductos()).sum();
     }
 }

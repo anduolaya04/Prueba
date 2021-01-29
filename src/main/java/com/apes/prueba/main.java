@@ -10,12 +10,15 @@ public class main {
         productoP.setNombre( "Jabon" );
         productoP.setPrecio( 2000 );
 
+        Carrito carrito = new Carrito();
+
         Carrito.llenarCarrito(productoP);
 
         llenarCarritoPapas();
 
         Carrito.tenerCarrito().stream().forEach( System.out::println );
         System.out.println( "Carrito.precioTotal = " + Carrito.calculaPrecioCarrito() );
+        System.out.println( "Suma alternativa= " + Carrito.alternativaPrecioCarrito() );
     }
 
     static void llenarCarritoPapas(){
